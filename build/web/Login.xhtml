@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </h:head>
+    <h:body>
+       
+       <div class="ll">
+       <h:form>
+     
+    <h:outputText value="Username" />
+    <h:inputText class="mm" id="username" ></h:inputText>
+    <h:message for="username"></h:message>
+    <br></br><br></br>
+    
+    <h:outputText value="Password" />
+    <h:inputSecret class="hi" id="password" ></h:inputSecret>
+    <h:message for="password"></h:message>
+    <br></br><br></br>
+   
+   
+        <h:commandButton class="hh" action="registration"
+      value="Login"></h:commandButton>
+    
+    
+  </h:form> 
+            </div>
+            
+            
+         <img class="imgh" src="folder/images/js.jpg" alt="alt"/>
+        
+    </h:body>
+</html>
