@@ -12,6 +12,15 @@ public class Abdl {
 private String email;
  private String address;
   private String mobileNumber;
+  private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     private String firstName;
    
@@ -65,12 +74,13 @@ private String email;
          
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-          PreparedStatement ps2 = con.prepareStatement( "insert into DATAA(FIRST_NAME,LAST_NAME,EMAIL,ADDRESS,MOBILE_NUMBER) values(?,?,?,?,?)");
+          PreparedStatement ps2 = con.prepareStatement( "insert into DATAA(FIRST_NAME,LAST_NAME,EMAIL,ADDRESS,MOBILE_NUMBER,GENDER) values(?,?,?,?,?,?)");
             ps2.setString(1,firstName);
             ps2.setString(2, lastName);
             ps2.setString(3, email);
             ps2.setString(4,  address);
             ps2.setString(5, mobileNumber );
+             ps2.setString(6, gender );
             ps2.executeUpdate();
        
             System.err.println("success");
