@@ -94,6 +94,18 @@ private String email;
     
  
 } 
-    
+ public static String del(int email){
+        System.out.println("deleted " + email);
+        try {
+             DBConnection db=new DBConnection();
+             Connection connection = db.connMethod();
+            PreparedStatement stmt=connection.prepareStatement("delete from DATAA where EMAIL = " + email);  
+            stmt.executeUpdate();  
+            connection.close();
+        } catch(Exception sqlException){
+            sqlException.printStackTrace();
+        }
+        return "/registration.xhtml?faces-redirect=true";
+    }   
 
 }
