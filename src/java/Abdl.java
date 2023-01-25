@@ -4,6 +4,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@SessionScoped
 
 @ManagedBean
 
@@ -75,9 +78,10 @@ private String email;
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
           PreparedStatement ps2 = con.prepareStatement( "insert into DATAA(FIRST_NAME,LAST_NAME,EMAIL,ADDRESS,MOBILE_NUMBER,GENDER) values(?,?,?,?,?,?)");
-            ps2.setString(1,firstName);
+            
+            ps2.setString(1, firstName);
             ps2.setString(2, lastName);
-            ps2.setString(3, email);
+             ps2.setString(3,email);
             ps2.setString(4,  address);
             ps2.setString(5, mobileNumber );
              ps2.setString(6, gender );

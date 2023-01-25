@@ -257,6 +257,17 @@ body {
                 border-radius: 10px;
             
             }
+            .lulu{
+            background: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s;
+            
+        }
      
         
         
