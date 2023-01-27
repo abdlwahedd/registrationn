@@ -8,10 +8,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 body {
     margin: 0;
+    
 }
 .hero{
     background-image: url("folder/images/js.jpg");
+    
   
+}
+.heroo{
+    background-color: wheat;
 }
  .imgh{
             width: 100%;
@@ -68,6 +73,7 @@ body {
             
             
         }
+       
       
         
         

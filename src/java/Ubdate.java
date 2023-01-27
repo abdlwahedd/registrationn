@@ -1,8 +1,9 @@
 
-import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -11,36 +12,10 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 
-public class Abdl {
+public class Ubdate {
 
-   
-     private String lastName;
-private String email;
- private String address;
-  private String mobileNumber;
-  private String gender;
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    private String firstName;
-   
-    public Abdl(){
-        
-    }
     
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+      String lastName;
 
     public String getLastName() {
         return lastName;
@@ -73,23 +48,43 @@ private String email;
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+ String email;
+  String address;
+   String mobileNumber;
+   String gender;
+  String firstName;
+
+    
    
     
-   public void registrationn(){
+   public void ubdatee(){
     try {
          
          
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-          PreparedStatement ps2 = con.prepareStatement( "insert into DATAA(FIRST_NAME,LAST_NAME,EMAIL,ADDRESS,MOBILE_NUMBER,GENDER) values(?,?,?,?,?,?)");
+            String s2= "update DATAA set FIRST_NAME='"+firstName+"',LAST_NAME='"+lastName+"',ADDRESS='"+address+"',MOBILE_NUMBER='"+mobileNumber+"',GENDER='"+gender+"' where EMAIL='"+email+"'";
+          Statement ps2=null;
+        ps2 = con.createStatement();
+        ps2.executeQuery(s2);
             
-            ps2.setString(1, firstName);
-            ps2.setString(2, lastName);
-             ps2.setString(3,email);
-            ps2.setString(4,  address);
-            ps2.setString(5, mobileNumber );
-             ps2.setString(6, gender );
-            ps2.executeUpdate();
+          
        
             System.err.println("success");
     } catch (ClassNotFoundException | SQLException e) {
@@ -98,6 +93,7 @@ private String email;
     
  
 } 
-
+ 
+ 
 
 }

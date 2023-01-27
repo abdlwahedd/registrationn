@@ -6,8 +6,28 @@
     <h:head>
         <title>retrive</title>
     </h:head>
-    <h:body>
+    <h:body >
         <h:dataTable id="USERTABLE" class="USERPAGE" value="#{samiye.getuserinformation()}" var="data">
+            <style>
+              body{
+                background-image: url("image/imm2.jpg");
+                background-size: 100%
+            }
+              
+           td{
+                margin: 20px;
+               
+                padding: 20px;
+                background-color: bisque;
+            }
+             
+            th{
+                background-color: goldenrod;
+                margin: 20px;
+                
+                padding: 20px;
+            }
+        </style>
             
               <h:column>
                   

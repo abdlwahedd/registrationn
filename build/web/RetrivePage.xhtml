@@ -7,7 +7,7 @@
         <title>retrive</title>
     </h:head>
     <h:body >
-        <h:dataTable id="USERTABLE" class="USERPAGE" value="#{samiye.getuserinformation()}" var="data">
+        <h:dataTable id="USERTABLE" class="USERPAGE" value="#{retrive2.getuserinformation()}" var="data">
             <style>
               body{
                 background-image: url("image/imm2.jpg");
@@ -32,47 +32,33 @@
               <h:column>
                   
                   <f:facet name="header">
-                    firstName 
+                    name 
                     </f:facet>
                
-                <h:outputText value="#{data.firstName}"/>  
+                <h:outputText value="#{data.name}"/>  
 
             </h:column>
               <h:column>
                  <f:facet name="header">
-                   lastName
+                   emaill
                </f:facet>
-                <h:outputText value="#{data.lastName}"/>  
+                <h:outputText value="#{data.emaill}"/>  
 
             </h:column>
               <h:column>
                 <f:facet name="header">
-                    email
+                    area
                </f:facet>
-                <h:outputText value="#{data.email}"/>  
+                <h:outputText value="#{data.area}"/>  
 
             </h:column>  <h:column>
                  <f:facet name="header">
-                   address
+                   subject
                    </f:facet>
-                <h:outputText value="#{data.address}"/>  
+                <h:outputText value="#{data.subject}"/>  
 
             </h:column>
-             <h:column>
-              <f:facet name="header">
-                 mobile
-          </f:facet>     
-                <h:outputText value="#{data.mobile}"/>  
-
-            </h:column>
-       <h:column>
-                <f:facet name="header">
-                  gender
-                   </f:facet>   
-              
-                <h:outputText value="#{data.gender}"/>  
-
-            </h:column>
+            
       
       
         </h:dataTable>
