@@ -12,7 +12,7 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 
-public class Ubdate {
+public class Update {
 
     
       String lastName;
@@ -73,7 +73,7 @@ public class Ubdate {
     
    
     
-   public void ubdatee(){
+   public void updatee(){
     try {
          
          

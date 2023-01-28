@@ -5,10 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>retrive</title>
-    </h:head>
-    <h:body >
-        <h:dataTable id="USERTABLE" class="USERPAGE" value="#{retrive2.getuserinformation()}" var="data">
-            <style>
+         <style>
               body{
                 background-image: url("image/imm2.jpg");
                 background-size: 100%
@@ -28,6 +25,10 @@
                 padding: 20px;
             }
         </style>
+    </h:head>
+    <h:body >
+        <h:dataTable id="USERTABLE" class="USERPAGE" value="#{retrive2.getuserinformation()}" var="data">
+           
             
               <h:column>
                   
@@ -42,7 +43,7 @@
                  <f:facet name="header">
                    emaill
                </f:facet>
-                <h:outputText value="#{data.emaill}"/>  
+                <h:outputText value="#{data.email}"/>  
 
             </h:column>
               <h:column>

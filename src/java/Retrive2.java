@@ -27,14 +27,14 @@ public class Retrive2 {
              
           
                 String name = resultset.getString("NAME");                             
-               String  emaill = resultset.getString("EMAILL");
+               String  email = resultset.getString("EMAIL");
                    String subject = resultset.getString("SUBJECT");
                    String  area= resultset.getString("AREA");
                      
                  
           
               
-                userfList.add(new Geter2(name,emaill,subject,area));
+                userfList.add(new Geter2(name,email,subject,area));
             } 
              
     }catch( SQLException | ClassNotFoundException e)

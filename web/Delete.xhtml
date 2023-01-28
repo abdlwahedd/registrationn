@@ -5,17 +5,19 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
-    <h:body>
-        <div class="ll">
+    <h:body style="position: absolute; top: 40%; left: 40%; background-color:palegreen">
+        
         
         <h:form >
-            <h:outputLabel value="DELET"></h:outputLabel>  
-            
-            <h:inputText value="#{delet.email}" ></h:inputText>
+            <h:outputLabel value="DELETE" style="font-size:20px; font-family:unset"></h:outputLabel>  
             <br></br>
-            <h:commandButton value="delete" action="#{delet.DeleteMethod}" onclick="click()"></h:commandButton>
+            <br></br>
+         
+            <h:inputText value="#{delete.email}" ></h:inputText>
+            <br></br>
+            <h:commandButton value="delete" action="#{delete.DeleteMethod}" onclick="click()"></h:commandButton>
         </h:form>
-            </div>
+           
             
        
             <SCRIPT for="message">

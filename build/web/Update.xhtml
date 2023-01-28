@@ -21,35 +21,35 @@
                 <fieldset class="ree">
                       <label for="firstName" class="col-sm-3 control-label">First Name:</label>
                     <div class="col-sm-8">
-                        <h:inputText  value="#{ubdate.firstName}" a:placeholder="First name..." />
+                        <h:inputText  value="#{update.firstName}" a:placeholder="First name..." />
                     </div>
                
                
                     <label for="lastName" class="col-sm-3 control-label">Last Name:</label>
        <div class="col-sm-8">
    <h:inputText 
-       value="#{ubdate.lastName}" a:placeholder="Last name..." />
+       value="#{update.lastName}" a:placeholder="Last name..." />
                     </div>
                 <label for="E-mail" class="col-sm-3 control-label">E-mail:</label>
                     <div class="col-sm-8">
-                        <h:inputText  value="#{ubdate.email}" a:placeholder="E-mail" />
+                        <h:inputText  value="#{update.email}" a:placeholder="E-mail" />
                     </div>
                 <label for="Address" class="col-sm-3 control-label">Address:</label>
                     <div class="col-sm-8">
-                        <h:inputText value="#{ubdate.address}" a:placeholder="Address" />
+                        <h:inputText value="#{update.address}" a:placeholder="Address" />
                     </div>
                 <label for="Mobilenumber" class="col-sm-3 control-label">Mobile number</label>
                     <div class="col-sm-8">
-                        <h:inputText value="#{ubdate.mobileNumber}" a:placeholder="Mobilenumber" />
+                        <h:inputText value="#{update.mobileNumber}" a:placeholder="Mobilenumber" />
                     </div>
                                  
                 <h:outputLabel value=" gender"></h:outputLabel>  
-              <h:selectOneRadio value="#{ubdate.gender}">          
+              <h:selectOneRadio value="#{update.gender}">          
    <f:selectItem itemValue="male" itemLabel="male" />
    <f:selectItem itemValue="female" itemLabel="female" />  
 </h:selectOneRadio>
  
-                <h:commandButton value="Ubdate" action="#{ubdate.ubdatee()}"></h:commandButton>                   
+                <h:commandButton value="Update" action="#{update.updatee()}"></h:commandButton>                   
 
         
     

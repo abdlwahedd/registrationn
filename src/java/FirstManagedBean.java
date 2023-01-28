@@ -13,7 +13,7 @@ public class FirstManagedBean  {
  private String subject;
  private String area;
 private String name;
- private String emaill;
+ private String email;
 
 
   
@@ -46,12 +46,12 @@ private String name;
     }
     
 
-    public String getEmaill() {
-        return emaill;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmaill(String emaill) {
-        this.emaill = emaill;
+    public void setEmail(String email) {
+        this.email = email;
     }
      
    
@@ -68,9 +68,9 @@ public void registration(){
             Connection con = dbcon.connMethod();
           
           
-            PreparedStatement ps1 = con.prepareStatement( "insert into USERTBL(NAME,EMAILL,SUBJECT,AREA) values(?,?,?,?)");
+            PreparedStatement ps1 = con.prepareStatement( "insert into USERTBL(NAME,EMAIL,SUBJECT,AREA) values(?,?,?,?)");
             ps1.setString(1,name);
-            ps1.setString(2, emaill);
+            ps1.setString(2, email);
             ps1.setString(3, subject);
             ps1.setString(4, area);
             ps1.executeUpdate();

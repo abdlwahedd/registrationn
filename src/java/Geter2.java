@@ -3,7 +3,7 @@ public class Geter2 {
      private String subject;
       private String area;
 private String name;
- private String emaill;
+ private String email;
 
     public String getSubject() {
         return subject;
@@ -17,13 +17,13 @@ private String name;
         return name;
     }
 
-    public String getEmaill() {
-        return emaill;
+    public String getEmail() {
+        return email;
     }
 
-  public  Geter2(String name,String emaill,String subject,String area){
+  public  Geter2(String name,String email,String subject,String area){
   this.name=name;
-  this.emaill=emaill;
+  this.email=email;
   this. subject= subject;
   this.area=area;
          

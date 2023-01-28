@@ -11,7 +11,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 
-public class Delet {
+public class Delete {
     private String email;
 
     public String getEmail() {

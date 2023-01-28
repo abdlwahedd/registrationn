@@ -49,9 +49,9 @@ public class Userlogin {
             rs.next();
             String UserName =rs.getString(1);
             if ("abdl".equals(UserName)) {
-                return "contact";
+                return "registration";
             } else {
-                return "Userlogin";
+                return "Admin";
             }
         } else {
             FacesContext.getCurrentInstance().addMessage(
