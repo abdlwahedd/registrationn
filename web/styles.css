@@ -274,8 +274,16 @@ body {
             transition: .4s;
             
         }
-     
+        .mainn{
+            background: rgba(10,10,10,.35);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px 40px;
+            border-radius: 1rem;
+            
+            
+        }
         
-        
+         
             
    
