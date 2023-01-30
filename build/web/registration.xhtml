@@ -7,64 +7,83 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
-        
-        
-       
+        <style>
+            
+            body{
+                 display:flex; align-items: center; justify-content: center; 
+             font-family: 'Poppins',sans-serif; height: 90vh; width: 100%; padding: 30px;  background-image: url("folder/images/de.jpg");
+             background-size: 100%;
+    
+                
+            } 
+            .hii{
+                 background: rgba(10,10,10,.35);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px 40px;
+            border-radius: 1rem; 
+            }
+            .input{
+                width: calc(100% / 2 - 15px); margin: 15px 0; 
+                
+            }
+            .sss{
+                display: flex; flex-wrap: wrap; 
+                 justify-content: space-between; margin: 10px 0 8px 0; 
+            }
+            .mn{
+                width: 100%; height: 50px; background: rgba(255,255,255,.1);
+                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease;
+            }
+            .la{ font-size: 22px; color: #faf9f6;  font-weight:500;}
+            .lk{display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500; }
+            
+        </style>
+      
         
         <title>Register</title>
         <link rel="stylesheet" href="styles.css"/>
     </h:head>
-    <h:body  style=" display:flex; align-items: center; justify-content: center; 
-             font-family: 'Poppins',sans-serif; height: 90vh; width: 100%; padding: 30px; background-color:yellowgreen "  >
+   
+      
+    <h:body  >
        
         <h:form  >
-             <div  style=" background: rgba(10,10,10,.35);
-            width: 100%;
-            max-width: 800px;
-            padding: 30px 40px;
-            border-radius: 1rem;">
-            <div style="display: flex; flex-wrap: wrap; 
-                 justify-content: space-between; margin: 10px 0 8px 0; ">
            
-                <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0; " >
-                    <label style=" display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500;  " for="firstName" class="col-sm-3 control-label">First Name:</label>
+      
+             <div class="hii" style="">
+            <div class="sss">
+           
+                <div class="input"  >
+                    <label for="firstName" class="lk">First Name:</label>
                     
-                        <h:inputText  value="#{abdl.firstName}" 
-                             style="width: 100%; height: 50px; background: rgba(255,255,255,.1);
-                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
-                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; "         a:placeholder="First name..." />
+                        <h:inputText class="mn" value="#{abdl.firstName}" 
+                             style=" "         a:placeholder="First name..." />
                    
                </div>
-               <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0;">
-                    <label for="lastName" class="col-sm-3 control-label" style=" display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500;  ">Last Name:</label>
+               <div class="input">
+                    <label for="lastName" class="lk"   >Last Name:</label>
           <h:inputText 
-       value="#{abdl.lastName}" style="width: 100%; height: 50px; background: rgba(255,255,255,.1);
-                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
-                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " a:placeholder="Last name..." />
+       value="#{abdl.lastName}" class="mn" a:placeholder="Last name..." />
           </div>
-                    <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0;">
-                <label for="E-mail" class="col-sm-3 control-label" style=" display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500;  ">E-mail:</label>
+                    <div class="input" >
+                <label for="E-mail" class="lk" >E-mail:</label>
                     
-                        <h:inputText  value="#{abdl.email}" style="width: 100%; height: 50px; background: rgba(255,255,255,.1);
-                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
-                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; "  a:placeholder="E-mail" />
+                        <h:inputText class="mn" value="#{abdl.email}"  a:placeholder="E-mail" />
                         </div>
-                   <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0;">
-                <label for="Address" class="col-sm-3 control-label" style=" display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500;  ">Address:</label>
+                   <div class="input" >
+                <label for="Address" class="lk"   >Address:</label>
                    
-                        <h:inputText value="#{abdl.address}" style="width: 100%; height: 50px; background: rgba(255,255,255,.1);
-                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
-                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; "  a:placeholder="Address" />
+                        <h:inputText value="#{abdl.address}" class="mn" a:placeholder="Address" />
                         </div>
-                    <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0;">
-                <label for="Mobilenumber" class="col-sm-3 control-label" style=" display: block; margin-bottom: 8px; color: #faf9f6;  font-weight:500;  ">Mobile number</label>
+                    <div class="input" >
+                <label for="Mobilenumber" class="lk" >Mobile number</label>
                    
-                        <h:inputText value="#{abdl.mobileNumber}"  style="width: 100%; height: 50px; background: rgba(255,255,255,.1);
-                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
-                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " a:placeholder="Mobilenumber" />
+                        <h:inputText value="#{abdl.mobileNumber}"  class="mn" a:placeholder="Mobilenumber" />
                    </div>
-                <div class="input" style=" width: calc(100% / 2 - 15px); margin: 15px 0;">            
-                <h:outputLabel value=" Gender" style=" font-size: 22px; color: #faf9f6;  font-weight:500;  "></h:outputLabel>  
+                <div class="input" >            
+                    <h:outputLabel value=" Gender" class="la" ></h:outputLabel>  
                 <h:selectOneRadio style="font-size: 14px; color: #faf9f6;" value="#{abdl.gender}">          
    <f:selectItem  itemValue="male" itemLabel="male" />
    <f:selectItem itemValue="female" itemLabel="female" />  
@@ -79,15 +98,15 @@
      <h:commandButton  value="Update" action="Update"></h:commandButton> 
                          
  </div>
+                  
+         
+           
              </div>  
           
    
                     
                
-           
-                              
-                
-           
+          
          
          
         </h:form>
@@ -96,9 +115,13 @@
    
            
 
-
+    
 
     </h:body>
+  
+      
+   
+
 </html>
 
                                        

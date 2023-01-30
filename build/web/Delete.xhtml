@@ -4,8 +4,11 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+            body{background-image: url("folder/images/css.jpg");}
+        </style>
     </h:head>
-    <h:body style="position: absolute; top: 40%; left: 40%; background-color:palegreen">
+    <h:body style="position: absolute; top: 40%; left: 40%; ">
         
         
         <h:form >
@@ -13,7 +16,9 @@
             <br></br>
             <br></br>
          
-            <h:inputText value="#{delete.email}" ></h:inputText>
+            <h:inputText value="#{delete.email}" style=" width: 100%; height: 50px; background: beige;
+                             color:#faf9f6; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease;" ></h:inputText>
             <br></br>
             <h:commandButton value="delete" action="#{delete.DeleteMethod}" onclick="click()"></h:commandButton>
         </h:form>
@@ -26,6 +31,8 @@
               alert("Succesfully deleted.");
             }
         </SCRIPT>
+       
+            
         
     </h:body>
 </html>
