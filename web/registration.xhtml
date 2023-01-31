@@ -58,7 +58,7 @@
                 <div class="input"  >
                     <label for="firstName" class="lk">First Name:</label>
                     
-                        <h:inputText class="mn" value="#{abdl.firstName}" 
+                        <h:inputText  class="mn" value="#{abdl.firstName}" 
                              style=" "         a:placeholder="First name..." />
                    
                </div>
@@ -70,7 +70,10 @@
                     <div class="input" >
                 <label for="E-mail" class="lk" >E-mail:</label>
                     
-                        <h:inputText class="mn" value="#{abdl.email}"  a:placeholder="E-mail" />
+                        <h:inputText id="input1" class="mn" value="#{abdl.email}"  a:placeholder="E-mail" required="true" validatorMessage="invalid Emailaddress"><f:validateRegex
+                                pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/></h:inputText>
+                        
+                          <h:message  for="input1" styleClass="error"/>
                         </div>
                    <div class="input" >
                 <label for="Address" class="lk"   >Address:</label>
