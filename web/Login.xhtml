@@ -13,12 +13,12 @@
        <h:form>
      
     <h:outputText value="Username" />
-    <h:inputText class="mm" id="username" required="true" requiredMessage="username is required" value="#{userlogin.username}" ></h:inputText>
+    <h:inputText class="mm" id="username" required="true" validatorMessage="username is required" value="#{userlogin.username}" ></h:inputText>
     <h:message for="username"></h:message>
     <br></br><br></br>
     
     <h:outputText value="Password" />
-    <h:inputSecret class="hi" id="password" required="true" requiredMessage="password is required" value="#{userlogin.password}" ></h:inputSecret>
+    <h:inputSecret class="hi" id="password" required="true" validatorMessage="password is required" value="#{userlogin.password}" ></h:inputSecret>
     <h:message for="password"></h:message>
     <br></br><br></br>
     	
